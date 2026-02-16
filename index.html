@@ -456,3 +456,24 @@ Paste inside <body>. Works great on GitHub Pages.
     }, true);
   })();
 </script>
+
+
+<script>
+  // FORCE WHITE TABLE TEXT (wins even if theme CSS overrides)
+  window.addEventListener('load', () => {
+    const scope = document.querySelector('section.ms-pricing');
+    if (!scope) return;
+
+    scope.querySelectorAll('*').forEach(el => {
+      el.style.setProperty('color', '#fff', 'important');
+      el.style.setProperty('-webkit-text-fill-color', '#fff', 'important');
+      el.style.setProperty('opacity', '1', 'important');
+    });
+
+    scope.querySelectorAll('.ms-pill, .ms-badge').forEach(el => {
+      el.style.setProperty('color', '#06101f', 'important');
+      el.style.setProperty('-webkit-text-fill-color', '#06101f', 'important');
+      el.style.setProperty('opacity', '1', 'important');
+    });
+  });
+</script>
