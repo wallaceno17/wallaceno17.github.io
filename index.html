@@ -455,6 +455,44 @@ Paste inside <body>. Works great on GitHub Pages.
     .ms-card,.ms-btn{transition:none}
   }
 </style>
+/* =========================================
+MOONSCAPE TABLE READABILITY FIX (FINAL)
+Forces all pricing tables to bright white
+========================================= */
+
+/* every table inside pricing */
+#pricing .ms-table,
+#pricing .ms-table *{
+    color:#ffffff !important;
+}
+
+/* headers specifically */
+#pricing .ms-table thead th{
+    color:#ffffff !important;
+    opacity:1 !important;
+}
+
+/* rows */
+#pricing .ms-table tbody td{
+    color:#ffffff !important;
+    opacity:1 !important;
+}
+
+/* section notes & bullet text */
+#pricing .ms-bullets li,
+#pricing .ms-panel-body p{
+    color:#ffffff !important;
+}
+
+/* box headings */
+#pricing h4{
+    color:#ffffff !important;
+}
+
+/* optional add-ons header */
+#pricing strong{
+    color:#ffffff !important;
+}
 
 <script>
   // Accordion: close others when one opens
